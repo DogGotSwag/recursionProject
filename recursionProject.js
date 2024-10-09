@@ -10,11 +10,12 @@ function iterationFibs(num) {
   return arr;
 }
 
-console.log(iterationFibs(8));
+// console.log(iterationFibs(8));
 
 function fibsRec(num, x = 0, y = 1) {
-    if(num <= 0) return [];
-    return [x].concat(fibsRec(num-1,y,x+y));
+  console.log("This was printed recursively");
+  if (num <= 0) return [];
+  return ((num-2)===0)?[x,y]:[x].concat(fibsRec(num - 1, y, x + y));
 }
 
 console.log(fibsRec(8));
